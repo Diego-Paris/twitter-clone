@@ -26,16 +26,16 @@ With the following features:
 
 ## Front-end
 
-* [ ] Create client folder
-* [ ] Setup index.html
-* [ ] Bring in Skeleton CSS
+* [x] Create client folder
+* [x] Setup index.html
+* [x] Bring in Skeleton CSS
   * http://getskeleton.com/
   * https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css
-* [ ] Create Header
-* [ ] Create form
-  * [ ] Name
-  * [ ] Content
-  * [ ] u-full-width to both inputs
+* [x] Create Header
+* [x] Create form
+  * [x] Name
+  * [x] Content
+  * [x] u-full-width to both inputs
 * [ ] Listen for form submit
 * [ ] Hide the form
 * [ ] Show loading spinner
