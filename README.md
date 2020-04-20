@@ -49,19 +49,19 @@ With the following features:
 * [x] npm init -y
 * [x] npm install express morgan
 * [x] Setup index.js
-* [ ] Add GET / route
-* [ ] Add POST /mews route
-  * [ ] log out req.body
+* [x] Add GET / route
+* [x] Add POST /mews route
+  * [x] log out req.body
 
 ## Front-end
 
-* [ ] fetch POST /mews with form data
-* [ ] See the CORS error and revel in this moment
+* [x] fetch POST /mews with form data
+* [x] See the CORS error and revel in this moment
 * ✅ Send user input from the client with fetch to the server
 
 ## Back-end
 
-* [ ] npm install cors
+* [x] npm install cors
 * [ ] Make sure the server is recieving the data
 * [ ] Add JSON body parser middleware
 * [ ] Validate name and content
