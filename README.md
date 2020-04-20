@@ -45,10 +45,10 @@ With the following features:
 
 ## Back-end
 
-* [ ] Create server folder
-* [ ] npm init -y
-* [ ] npm install express morgan
-* [ ] Setup index.js
+* [x] Create server folder
+* [x] npm init -y
+* [x] npm install express morgan
+* [x] Setup index.js
 * [ ] Add GET / route
 * [ ] Add POST /mews route
   * [ ] log out req.body
