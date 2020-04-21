@@ -14,6 +14,17 @@ app.use(cors());
 app.use(express.json());
 
 
+// const MongoClient = require('mongodb').MongoClient;
+// const uri = "mongodb+srv://dparis:<paris>@cluster0-d5egs.mongodb.net/test?retryWrites=true&w=majority";
+// const client = new MongoClient(uri, { useNewUrlParser: true });
+// client.connect(err => {
+//   const collection = client.db("test").collection("devices");
+//   // perform actions on the collection object
+//   client.close();
+// });
+
+
+
 // when you get a 'get' request on the / route, run this function
 app.get("/", (req, res) => {
   res.json({

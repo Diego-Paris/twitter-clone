@@ -6,7 +6,7 @@ const form = document.querySelector("form");
 // reference to the loading gif
 const loadingElement = document.querySelector(".loading");
 const mewsElement = document.querySelector(".mews");
-const API_URL = "http://localhost:5000/mews";
+const API_URL = window.location.hostname === "localhost" ? "http://localhost:5000/mews" : "https://dparis-twitter-clone.now.sh/mews";
 
 loadingElement.style.display = "";
 
