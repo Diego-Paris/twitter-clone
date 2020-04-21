@@ -5,12 +5,12 @@ const form = document.querySelector("form");
 
 // reference to the loading gif
 const loadingElement = document.querySelector(".loading");
-// keeps it from displaying
-loadingElement.style.display = "none";
-
-
-
+const mewsElement = document.querySelector(".mews");
 const API_URL = "http://localhost:5000/mews";
+
+loadingElement.style.display = "";
+
+listAllMews();
 
 // adds an event listener to the form
 form.addEventListener("submit", (event) => {
@@ -39,5 +39,43 @@ form.addEventListener("submit", (event) => {
     headers: {
       "content-type": "application/json",
     },
-  });
+  })
+    .then((response) => response.json())
+    .then((createdMew) => {
+      console.log(createdMew);
+      form.reset();
+      //loadingElement.style.display = "none";
+      form.style.display = "";
+      listAllMews();
+    });
 });
+
+function listAllMews() {
+    mewsElement.innerHTML = "";
+  fetch(API_URL)
+    .then((response) => response.json())
+    .then((mews) => {
+      console.log(mews);
+      console.log("This is for le dillan");
+      mews.reverse();
+      mews.forEach((mew) => {
+        const div = document.createElement("div");
+
+        const header = document.createElement("h3");
+        header.textContent = mew.name;
+
+        const contents = document.createElement("p");
+        contents.textContent = mew.content;
+
+        const date = document.createElement('small');
+        date.textContent = new Date(mew.created);
+
+        div.appendChild(header);
+        div.appendChild(contents);
+        div.appendChild(date);
+
+        mewsElement.appendChild(div);
+      });
+      loadingElement.style.display = "none";
+    });
+}
